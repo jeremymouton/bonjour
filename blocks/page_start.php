@@ -22,9 +22,9 @@
 			# <link rel="stylesheet" href="css/styles.min.css">
 		-->
 
-		<link rel="stylesheet/less" type="text/css" href="less/styles.less">
-		<script src="js/vendor/less-1.3.0.min.js"></script>
-		<script src="js/vendor/less-1.3.0.min.js"></script>
+		<link rel="stylesheet/less" type="text/css" href="assets/less/styles.less">
+		<script src="assets/js/vendor/less-1.3.0.min.js"></script>
+		<script src="assets/js/vendor/less-1.3.0.min.js"></script>
 		<script type="text/javascript">
 			less.env = "development";
 			less.watch();

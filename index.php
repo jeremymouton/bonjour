@@ -4,8 +4,7 @@
 	<div class="row">
 		<div class="span12">
 			<h1>Bonjour!</h1>
-			<blockquote>A bootstraped template to kickstart front-end development.</blockquote>
-			<p>Using Bootstrap 2.2.2 (less)</p>
+			<blockquote>A bootstrapped template to kickstart front-end development.</blockquote>
 		</div><!-- /span12 -->
 	</div><!-- /row -->
 </div><!-- /container.main -->

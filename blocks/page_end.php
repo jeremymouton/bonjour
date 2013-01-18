@@ -3,25 +3,25 @@
 	</div> <!-- .wrapper -->
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
 
 	<!-- Bootstrap JS -->
-	<script src="js/bootstrap/bootstrap-transition.js"></script>
-    <script src="js/bootstrap/bootstrap-alert.js"></script>
-    <script src="js/bootstrap/bootstrap-modal.js"></script>
-    <script src="js/bootstrap/bootstrap-dropdown.js"></script>
-    <script src="js/bootstrap/bootstrap-scrollspy.js"></script>
-    <script src="js/bootstrap/bootstrap-tab.js"></script>
-    <script src="js/bootstrap/bootstrap-tooltip.js"></script>
-    <script src="js/bootstrap/bootstrap-popover.js"></script>
-    <script src="js/bootstrap/bootstrap-button.js"></script>
-    <script src="js/bootstrap/bootstrap-collapse.js"></script>
-    <script src="js/bootstrap/bootstrap-carousel.js"></script>
-    <script src="js/bootstrap/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap/bootstrap-typeahead.js"></script>
+	<!-- <script src="assets/js/bootstrap/bootstrap-transition.js"></script> -->
 
 	<!-- Initialize JS -->
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
+	<script src="assets/js/plugins.js"></script>
+	<script src="assets/js/main.js"></script>
 
     <!-- Google Analytics -->
 	<script>
