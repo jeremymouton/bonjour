@@ -3,8 +3,8 @@
 // -------------
 
 body {
-    font-size: @baseFontSize;
-    font-family: @baseFontFamily;
+	font-size: @baseFontSize;
+	font-family: @baseFontFamily;
 }
 
 a {
@@ -18,10 +18,12 @@ a {
 // NAV
 
 .navbar-inner {
+	// don't forget "filter:none" if replacing the background to override bootstrap on IE. 
 	.border-radius(0);
 	
 	ul.dropdown-menu {
 		.border-radius(0);
+
 	}
 }
 
@@ -29,34 +31,13 @@ a {
 // HEADINGS
 // -------------
 
-h1 {
-	font-size: 35px;
-	line-height: 140%;
-}
+h1, h2, h3, h4, h5 {}
 
-h2 {
-	font-size: 28px;
-	line-height: 140%;
-}
-
-h3 {
-	font-size: 22px;
-	line-height: 140%;
-}
-
-h4 {
-	font-size: 18px;
-	line-height: 140%;
-}
 
 // Project styles
 
-.header {
-	.nav {}
-}
+.header {}
 
 .main {}
 
-.footer {
-	margin-top: 50px;
-}
+.footer {}
