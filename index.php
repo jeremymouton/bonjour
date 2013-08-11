@@ -2,7 +2,7 @@
 
 <div class="container main">
 	<div class="row">
-		<div class="span12">
+		<div class="col-lg-12">
 			<h1>Bonjour!</h1>
 			<blockquote>A bootstrapped template to kickstart front-end development.</blockquote>
 		</div>
