@@ -6,7 +6,7 @@
 	<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.0.2.min.js"><\/script>')</script>
 
 	<!-- Bootstrap JS -->
-	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/vendor/bootstrap.min.js"></script>
 
 	<!-- Initialize JS -->
 	<script src="assets/js/plugins.js"></script>
