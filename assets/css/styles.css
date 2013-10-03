@@ -2155,8 +2155,8 @@ input[type="button"].btn-block {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('.eot');
-  src: url('.eot?#iefix') format('embedded-opentype'), url('.woff') format('woff'), url('.ttf') format('truetype'), url('.svg#glyphicons-halflingsregular') format('svg');
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -5941,4 +5941,16 @@ td.visible-print {
 }
 .bold {
   font-weight: bold;
+}
+@media (min-width: 1200px) {
+  
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  
+}
+@media (max-width: 767px) {
+  
 }

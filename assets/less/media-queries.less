@@ -2,44 +2,14 @@
 // MEDIA QUERIES
 // ======================
 
-// Large desktop
-@media (min-width: 1200px) {
-
-}
+// Large
+@media (min-width: @screen-lg) {}
 
 // Standard
-@media (min-width: 980px) {
+@media (min-width: @screen-md) and (max-width: @screen-md-max) {}
 
-}
+// Tablet
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max) {}
 
-// Why not?
-@media (max-width: 979px) and (min-width: 768px) {
-
-}
-
-// Portrait tablet to landscape and desktop
-@media (max-width: 979px) {
-
-}
- 
-// Landscape phone to portrait tablet
-@media (max-width: 767px) {
-
-}
- 
-// Landscape phones and down
-@media (max-width: 480px) {
-
-}
-
-
-// RETINA (2x RESOLUTION DEVICES)
-// This applies to the retina iPhone (4s) and iPad (2,3) along with 
-// other displays with a 2x resolution. You can also create a media
-// query for retina AND a certain size if you want. Go Nuts.
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-moz-device-pixel-ratio: 1.5),
-       only screen and (min-device-pixel-ratio: 1.5) {
-
-} 
+// Smartphone
+@media (max-width: @screen-xs-max) {}
