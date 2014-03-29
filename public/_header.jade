@@ -1,0 +1,34 @@
+.header
+	.container
+		nav.navbar.navbar-default
+			.navbar-header
+				button.navbar-toggle(type="button" data-toggle="collapse" data-target=".topnav-collapse")
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				.navbar-brand Bonjour
+
+
+			div.collapse.navbar-collapse.topnav-collapse
+				ul.nav.navbar-nav
+					li.dropdown
+						a.dropdown-toggle(href="#", data-toggle="dropdown") Link 
+							b.caret
+						ul.dropdown-menu
+							li: a(href="#{site_url}") Subnav
+							li: a(href="#") Subnav
+							li: a(href="#") Subnav
+							li: a(href="#") Subnav
+
+					li
+						a(href="#") Link
+					li
+						a(href="#") Link
+					li
+						a(href="#") Link
+
+				ul.nav.navbar-nav.navbar-right
+					li: a(href="#") Link
+					li: a(href="#") Link
+					li: a(href="#") Link

@@ -1,4 +1,15 @@
-bonjour
-=======
+# Anniversary Inn
 
-A bootstrapped template to kickstart front-end development.
+Harp v0.11.2 [http://harpjs.com](http://harpjs.com)
+
+---
+
+Using Jade, LESS
+
+---
+
+`sudo npm install -g harp`
+
+`harp init [project]`
+
+`harp server [project]`

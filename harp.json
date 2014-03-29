@@ -1,0 +1,8 @@
+{
+	"globals": {
+		"title": "Bonjour",
+		"site_url": "http://localhost:9000",
+		"img_url": "http://localhost:9000/assets/images",
+		"js_url": "http://localhost:9000/assets/js"
+	}
+}
