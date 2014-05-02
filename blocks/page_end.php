@@ -3,7 +3,7 @@
 	</div> <!-- .wrapper -->
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.0.2.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
 	<!-- Bootstrap JS -->
 	<script type="text/javascript" src="assets/js/vendor/bootstrap.min.js"></script>
