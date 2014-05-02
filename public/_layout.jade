@@ -12,19 +12,24 @@ head
 	meta(name='viewport', content='width=device-width, initial-scale=1')
 	link(rel='stylesheet', href='/assets/less/styles.css')
 
-	body
-		.wrapper
-			!= partial("_header")
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
 
-			!= yield
+body
+	.wrapper
+		!= partial("_header")
 
-			!= partial("_footer")
+		!= yield
 
-		script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js')
-		script.
-			window.jQuery || document.write('<script src="#{js_url}/vendor/jquery-2.0.2.min.js"><\/script>')
+		!= partial("_footer")
 
-		script(src='#{js_url}/vendor/bootstrap.min.js')
-		script(src='#{js_url}/plugins.js')
-		script(src='#{js_url}/main.js')
-		script(src='#{js_url}/vendor/retina-1.1.0.min.js')
+	script(src='//code.jquery.com/jquery-1.11.0.min.js')
+	script.
+		window.jQuery || document.write('<script src="#{js_url}/vendor/jquery-1.11.0.min.js"><\/script>')
+
+	script(src='#{js_url}/vendor/bootstrap.min.js')
+	script(src='#{js_url}/plugins.js')
+	script(src='#{js_url}/main.js')
+	script(src='#{js_url}/vendor/retina-1.1.0.min.js')
