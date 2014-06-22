@@ -9,12 +9,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>Bonjour</title>
 	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<!--[if lt IE 9]>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
-    <![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
 	<!-- Favicons and touch icons -->
 	<link rel="shortcut icon" href="assets/ico/favicon.ico">
@@ -23,6 +18,15 @@
 	<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
 	<link rel="stylesheet" href="assets/css/styles.css">
+
+	<!--[if (gte IE 6)&(lte IE 8)]>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
 </head>
 <body>
 <div class="wrapper">

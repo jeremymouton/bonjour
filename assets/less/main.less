@@ -2,14 +2,72 @@
 // MAIN STYLES
 // ======================
 
+body {
+	color: @mainTextColor;
+}
+
+
+// MISC
+
 a {
-	&:focus {}
-	&:active {}
+	&:focus,
+	&:active,
 	&:hover {}
 }
 
-.main {}
+ul {}
 
-.footer {}
+p {}
+
+blockquote {}
+
+
+// HEADINGS
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+
+// HEADER
+
+.header {
+	&:extend(.container);
+}
+
+
+// NAV
+
+.navbar {
+	.navbar-toggle {}
+
+	.nav {
+		> li > a {}
+	}
+}
+
+
+// MAIN
+
+.main {
+	&:extend(.container);
+}
+
+.page-header {
+
+}
+
+.content {}
+
+
+// FOOTER
+
+.footer {
+	&:extend(.container);
+}
 
 // ======================

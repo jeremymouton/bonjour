@@ -728,24 +728,36 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
-.container {
+.container,
+.header,
+.main,
+.footer {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  .container {
+  .container,
+  .header,
+  .main,
+  .footer {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  .container {
+  .container,
+  .header,
+  .main,
+  .footer {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  .container {
+  .container,
+  .header,
+  .main,
+  .footer {
     width: 1170px;
   }
 }
@@ -5611,7 +5623,13 @@ button.close {
 .panel-body:before,
 .panel-body:after,
 .modal-footer:before,
-.modal-footer:after {
+.modal-footer:after,
+.header:before,
+.header:after,
+.main:before,
+.main:after,
+.footer:before,
+.footer:after {
   content: " ";
   display: table;
 }
@@ -5628,7 +5646,10 @@ button.close {
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
-.modal-footer:after {
+.modal-footer:after,
+.header:after,
+.main:after,
+.footer:after {
   clear: both;
 }
 .center-block {
@@ -5777,6 +5798,11 @@ button.close {
     display: none !important;
   }
 }
+.font-smoothing {
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .pull-left {
   float: left;
 }
@@ -5810,4 +5836,7 @@ button.close {
 }
 .bold {
   font-weight: bold;
+}
+body {
+  color: #333333;
 }
