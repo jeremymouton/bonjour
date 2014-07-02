@@ -1,6 +1,9 @@
-Bonjour
-=======
+# Bonjour
 
 A bootstrapped template to kickstart frontend development.
 
-Bundled with Bootstrap 3.1.1, jQuery 1.11.0, LESS stylesheets, FastClick, Selectivizr and Retinajs.
+
+## Install
+
+- `bower install` to pull frontend dependencies into `/assets/vendor/` ([Bower](http://bower.io/)).
+- Compile `/assets/less/styles.less` into `/assets/css/styles.css`.
