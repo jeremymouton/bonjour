@@ -5,5 +5,5 @@ A bootstrapped template to kickstart frontend development.
 
 ## Install
 
-- `bower install` to pull frontend dependencies into `/assets/vendor/` ([Bower](http://bower.io/)).
+- `composer install` to pull frontend dependencies into `/assets/vendor/` ([Composer](https://getcomposer.org/)).
 - Compile `/assets/less/styles.less` into `/assets/css/styles.css`.
