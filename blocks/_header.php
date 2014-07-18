@@ -1,8 +1,7 @@
 <div class="header">
-	<nav class="navbar navbar-default" role="navigation">
-		<!-- Brand and toggle get grouped for better mobile display -->
+	<nav class="navbar" role="navigation">
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-navbar">
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -11,8 +10,7 @@
 			<a class="navbar-brand" href="#">Bonjour</a>
 		</div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse navbar-ex1-collapse">
+		<div class="collapse navbar-collapse main-navbar">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">Link</a></li>
 				<li><a href="#">Link</a></li>

@@ -1,9 +1,0 @@
-{
-    "require": {
-        "yiisoft/jquery": "1.11.1",
-        "twbs/bootstrap": "3.2.*@dev"
-    },
-    "config": {
-	    "vendor-dir": "assets/vendor"
-	}
-}
