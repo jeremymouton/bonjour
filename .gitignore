@@ -1,4 +1,3 @@
 .DS_Store
 .bower.json
-assets/vendor
-composer.lock
+/assets/less/config.codekit
