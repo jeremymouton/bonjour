@@ -1,7 +1,23 @@
 # Bonjour
 
-A bootstrapped template to kickstart frontend development (using Bower).
+## Clone & Install
 
-## Install
+- `git clone https://github.com/jeremymouton/bonjour.git`
+- `cd bonjour`
 
-- Compile `/assets/less/styles.less` into `/assets/css/styles.css`.
+Install Gulp and Bower
+
+- `npm install`
+- `bower install`
+
+
+### Running Gulp
+
+- `gulp`
+
+For auto-compile use `gulp watch`.
+
+
+### Frontend notes
+
+All assets go in `/src/` and are compiled with Gulp to the `/assets/` folder.

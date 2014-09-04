@@ -1,3 +1,5 @@
 .DS_Store
 .bower.json
-/assets/less/config.codekit
+
+/node_modules
+/bower_components
