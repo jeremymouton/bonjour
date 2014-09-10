@@ -2,20 +2,21 @@
 
 ## Clone & Install
 
-- `git clone https://github.com/jeremymouton/bonjour.git`
-- `cd bonjour`
+- `$ git clone https://github.com/jeremymouton/bonjour.git && cd bonjour`
 
 Install Gulp and Bower
 
-- `npm install`
-- `bower install`
+- `$ npm install`
+- `$ bower install`
 
 
 ### Running Gulp
 
-- `gulp`
+- `$ gulp`
 
-For auto-compile use `gulp watch`.
+For auto-compile use `$ gulp watch`.
+
+For LiveReload, install [LiveReload Chrome extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/)
 
 
 ### Frontend notes

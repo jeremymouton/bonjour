@@ -37,11 +37,6 @@ var
 
 var config = {
 
-  // If you do not have the live reload extension installed,
-  // set this to true. We will include the script for you,
-  // just to aid with development.
-  appendLiveReload: false,
-
   // Should CSS & JS be compressed?
   minifyCss: false,
   uglifyJS: false
@@ -78,10 +73,6 @@ gulp.task('js', function() {
     'src/js/plugins.js',
     'src/js/main.js'
   ];
-
-  if (config.appendLiveReload === true) {
-    scripts.push('src/js/livereload.js');
-  }
 
   var stream = gulp
     .src(scripts)
@@ -153,12 +144,8 @@ gulp.task('watch', function() {
   // Watch webfonts
   gulp.watch('src/webfonts/**/*', ['webfonts']);
 
-  // Create LiveReload server
-  var server = livereload();
-
-  // Watch any files in , reload on change
-  gulp.watch(['assets/css/styles.css', 'assets/js/script.js', 'assets/images/**/*', 'assets/webfonts/**/*',]).on('change', function(file) {
-    server.changed(file.path);
-  });
-
+  // Livereload
+  livereload.listen();
+  gulp.watch('assets/**/*').on('change', livereload.changed);
+  
 });
