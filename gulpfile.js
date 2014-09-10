@@ -47,10 +47,7 @@ var config = {
 gulp.task('css', function() {
   var stream = gulp
     .src('src/less/styles.less')
-    .pipe(less({
-      // generateSourceMap: true, // default true
-      // paths: [ path.join(__dirname, 'src/less') ]
-    }).on('error', notify.onError(function (error) {
+    .pipe(less().on('error', notify.onError(function (error) {
       return 'Error compiling LESS: ' + error.message;
     })))
     .pipe(gulp.dest('assets/css'));
