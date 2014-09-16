@@ -33,6 +33,8 @@ var
   notify       = require('gulp-notify'),
   cache        = require('gulp-cache'),
   path         = require('path'),
+  sourcemaps   = require('gulp-sourcemaps'),
+  imagemin     = require('gulp-imagemin'),
   livereload   = require('gulp-livereload');
 
 var config = {
@@ -47,9 +49,11 @@ var config = {
 gulp.task('css', function() {
   var stream = gulp
     .src('src/less/styles.less')
+    .pipe(sourcemaps.init())
     .pipe(less().on('error', notify.onError(function (error) {
       return 'Error compiling LESS: ' + error.message;
     })))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('assets/css'));
 
   if (config.minifyCss === true) {
@@ -88,6 +92,7 @@ gulp.task('js', function() {
 gulp.task('images', function() {
   return gulp
     .src('src/images/**/*')
+    .pipe(imagemin())
     .pipe(gulp.dest('assets/images'))
     .pipe(notify({ message: 'Successfully processed Images' }));
 });
@@ -104,8 +109,7 @@ gulp.task('favicons', function() {
 gulp.task('webfonts', function() {
   return gulp
     .src([
-      'bower_components/bootstrap/fonts/**/*',
-      // 'src/webfonts/fontello/**/*'
+      'bower_components/bootstrap/fonts/**/*'
     ])
     .pipe(gulp.dest('assets/webfonts'))
     .pipe(notify({ message: 'Successfully processed Webfonts' }));
