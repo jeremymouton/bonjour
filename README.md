@@ -2,23 +2,29 @@
 
 ## Clone & Install
 
-- `$ git clone https://github.com/jeremymouton/bonjour.git && cd bonjour`
+- `~ $ git clone https://github.com/jeremymouton/bonjour.git`
+- `~ $ cd bonjour`
 
-Install Gulp and Bower
+Install Gulp and Bower dependencies
 
-- `$ npm install`
-- `$ bower install`
+- `~ $ npm install`
+- `~ $ bower install`
+
+More on Node.js: [http://nodejs.org/](http://nodejs.org/)<br>
+More on Gulp: [https://github.com/gulpjs/gulp/](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)<br>
+More on Bower: [http://bower.io/](http://bower.io/)
 
 
 ### Running Gulp
 
-- `$ gulp`
+- `~ $ gulp`
 
-For auto-compile use `$ gulp watch`.
+For auto-compile use `~ $ gulp watch`.
 
 For LiveReload, install [LiveReload Chrome extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/)
 
 
 ### Frontend notes
 
-All assets go in `/src/` and are compiled with Gulp to the `/assets/` folder.
+- Develop in `/src/` folder and compile with Gulp to the `/assets/` folder.
+- 

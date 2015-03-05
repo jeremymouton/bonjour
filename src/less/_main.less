@@ -2,12 +2,17 @@
 // MAIN STYLES
 // ======================
 
-body {
-	background: @bodyBg;
-	color: @mainTextColor;
-	font-size: @mainTextSize;
+body {}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
 }
 
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
 
 // MISC
 
@@ -15,8 +20,11 @@ a {
 	&:focus,
 	&:active,
 	&:hover {}
+
+	&:visited {}
 }
 
+ol {}
 ul {}
 
 p {}
@@ -38,38 +46,24 @@ h4 {}
 // HEADER
 
 .header {
-	&:extend(.container);
-}
-
-
-// NAV
-
-.navbar {
-	.navbar-toggle {}
-
-	.nav {
-		> li > a {}
-	}
+	
 }
 
 
 // MAIN
 
-.main {
+main {}
+
+.content {
 	&:extend(.container);
 }
-
-.page-header {
-
-}
-
-.content {}
 
 
 // FOOTER
 
 .footer {
 	&:extend(.container);
+	margin-top: 50px;
 }
 
 // ======================

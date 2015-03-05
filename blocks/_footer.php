@@ -1,3 +1,3 @@
-<div class="footer">
-	<p>&copy; <?= date('Y') ?></p> 
-</div>
+<footer class="footer">
+	<p class="copyright">&copy; <?= date('Y'); ?></p>
+</footer>
