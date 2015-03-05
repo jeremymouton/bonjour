@@ -27,4 +27,3 @@ For LiveReload, install [LiveReload Chrome extension](https://chrome.google.com/
 ### Frontend notes
 
 - Develop in `/src/` folder and compile with Gulp to the `/assets/` folder.
-- 
