@@ -30,7 +30,11 @@ gulp.task('css', function() {
   return stream
     .pipe(gulp.dest('assets/css'))
     .pipe(minifycss())
-    .pipe(rename('styles.min.css'))
+    .pipe(rename(function (path) {
+      if(path.extname === '.css') {
+        path.basename += '.min';
+      }
+    }))
     .pipe(gulp.dest('assets/css'))
     .pipe(notify({ message: 'Successfully compiled LESS' }));
 });

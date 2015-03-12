@@ -10,9 +10,11 @@ Install Gulp and Bower dependencies
 - `~ $ npm install`
 - `~ $ bower install`
 
-More on Node.js: [http://nodejs.org/](http://nodejs.org/)<br>
-More on Gulp: [https://github.com/gulpjs/gulp/](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)<br>
-More on Bower: [http://bower.io/](http://bower.io/)
+|         |                                                                    |
+|---------|--------------------------------------------------------------------|
+| Gulp    | [https://github.com/gulpjs/gulp/](https://github.com/gulpjs/gulp/) |
+| Bower   | [http://bower.io/](http://bower.io/)                               |
+| Node.js | [http://nodejs.org/](http://nodejs.org/)                           |
 
 
 ### Running Gulp
