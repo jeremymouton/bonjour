@@ -1,8 +1,8 @@
 		<?php include 'blocks/_footer.php' ?>
 	
-	</main>
+	</div>
 
-	<script src="assets/js/script.js"></script>
+	<script src="assets/js/script.min.js"></script>
 	
 </body>
 </html>

@@ -1,6 +1,5 @@
 // ======================
-// Project: Bonjour
-// Website: https://github.com/jeremymouton/bonjour
+// Project: Aspen Jira
 // Author: Aspen Digital (http://aspendigital.com)
 // ======================
 
@@ -13,17 +12,25 @@
 @import "_bootstrap.less";
 
 // Retina.js
-@import "@{bower_components}/retina.js/src/retina.less";
+// @import "@{bower_components}/retina.js/src/retina.less";
 
 
 // ======================
 // MAIN STYLES
 
-@import "_mixins.less";
-@import "_webfonts.less";
-@import "_variables.less";
-@import "_helpers.less";
-@import "_navigation.less";
-@import "_main.less";
-@import "_media-queries.less";
-@import "_ie.less";
+@import "common/_variables.less";
+@import "common/_global.less";
+@import "common/_helpers.less";
+
+@import "components/_mixins.less";
+@import "components/_webfonts.less";
+@import "components/_plugins.less";
+
+@import "layouts/_header.less";
+@import "layouts/_footer.less";
+@import "layouts/_navigation.less";
+@import "layouts/_page.less";
+
+@import "common/_ie.less";
+
+// ======================

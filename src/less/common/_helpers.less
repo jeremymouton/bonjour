@@ -2,17 +2,28 @@
 // HELPERS
 // ======================
 
+
+// ======================
 // Fonts
 
 
+// ======================
 // Font Anti-aliased
 
-.font-smoothing {
-	font-smoothing: antialiased;
+.font-smoothing() {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
 }
 
+.font-smoothing(off) {
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: auto;
+	font-smoothing: subpixel-antialiased;
+}
+
+
+// ======================
 // Layout helpers
 
 .pull-left { 
@@ -44,6 +55,8 @@
 	text-align: center; 
 }
 
+
+// ======================
 // Font helpers
 
 .lowercase { 
