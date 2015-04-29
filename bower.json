@@ -1,5 +1,6 @@
 {
-    "devDependencies": {
+	"name": "bonjour",
+    "dependencies": {
         "bootstrap": "~3",
         "retina.js": "1.3.0"
     }
