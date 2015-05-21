@@ -16,21 +16,28 @@
 
 
 // ======================
-// MAIN STYLES
+// STYLES
 
-@import "common/_variables.less";
-@import "common/_global.less";
-@import "common/_helpers.less";
+// BASE
+@import "_base/_variables.less";
+@import "_base/_webfonts.less";
+@import "_base/_global.less";
+@import "_base/_headings.less";
 
-@import "components/_mixins.less";
-@import "components/_webfonts.less";
-@import "components/_plugins.less";
+// HELPERS
+@import "_helpers/_utilities.less";
+@import "_helpers/_mixins.less";
 
-@import "layouts/_header.less";
-@import "layouts/_footer.less";
-@import "layouts/_navigation.less";
-@import "layouts/_page.less";
+// OBJECTS
+@import "_objects/_row.less";
+@import "_objects/_column.less";
+@import "_objects/_container.less";
 
-@import "common/_ie.less";
+// COMPONENTS
+@import "_components/_button.less";
 
-// ======================
+// BLOCKS
+@import "_blocks/_header.less";
+@import "_blocks/_footer.less";
+@import "_blocks/_navigation.less";
+@import "_blocks/_main.less";

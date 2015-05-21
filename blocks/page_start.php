@@ -10,7 +10,7 @@
 <!-- Generate favicons from http://realfavicongenerator.net/ -->
 <link rel="shortcut icon" href="assets/ico/favicon.ico">
 
-<link rel="stylesheet" href="assets/css/styles.min.css">
+<link rel="stylesheet" href="assets/css/styles.css">
 
 <!--[if lt IE 9]>
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>

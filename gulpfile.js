@@ -15,16 +15,19 @@ var
   rename       = require('gulp-rename'),
   path         = require('path'),
   autoprefixer = require('gulp-autoprefixer'),
+  sourcemaps   = require('gulp-sourcemaps'),
   livereload   = require('gulp-livereload');
 
 // CSS
 gulp.task('css', function() {
   var stream = gulp
     .src('src/less/styles.less')
+    .pipe(sourcemaps.init())
     .pipe(less().on('error', notify.onError(function (error) {
       return 'Error compiling LESS: ' + error.message;
     })))
     .pipe(autoprefixer())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('assets/css'));
 
   return stream
@@ -46,7 +49,6 @@ gulp.task('js', function() {
     'src/components/bootstrap/js/dropdown.js',
     'src/components/bootstrap/js/collapse.js',
     'src/components/bootstrap/js/transition.js',
-    'src/components/retina.js/dist/retina.js',
     'src/js/plugins.js',
     'src/js/main.js'
   ];
@@ -68,25 +70,25 @@ gulp.task('js', function() {
 });
 
 // Fonts
-gulp.task('webfonts', function() {
+gulp.task('fonts', function() {
   return gulp
     .src([
-      // 'src/components/bootstrap/fonts/**/*' // glyphicons?
+      // 'src/components/bootstrap/fonts/**/*'
     ])
-    .pipe(gulp.dest('assets/webfonts'))
+    .pipe(gulp.dest('assets/fonts'))
     .pipe(notify({ message: 'Successfully processed Webfonts' }));
 });
 
 // Rimraf
 gulp.task('rimraf', function() {
   return gulp
-    .src(['assets/css', 'assets/js'], {read: false})
+    .src(['assets/css', 'assets/js', 'assets/fonts'], {read: false})
     .pipe(rimraf());
 });
 
 // Default task
 gulp.task('default', ['rimraf'], function() {
-  gulp.start('css', 'js');
+  gulp.start('css', 'js', 'fonts');
 });
 
 // Watch
