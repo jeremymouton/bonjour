@@ -18,8 +18,12 @@ var
   sourcemaps   = require('gulp-sourcemaps'),
   livereload   = require('gulp-livereload');
 
+var $cssStream;
+
 // CSS
-gulp.task('css', function() {
+gulp.task('css', ['css:compile', 'css:minify']);
+
+gulp.task('css:compile', function() {
   var stream = gulp
     .src('src/less/styles.less')
     .pipe(sourcemaps.init())
@@ -28,9 +32,14 @@ gulp.task('css', function() {
     })))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('assets/css'));
+    .pipe(gulp.dest('assets/css'))
+    .pipe(notify({ message: 'Successfully compiled LESS' }));
 
-  return stream
+  return $cssStream = stream;
+});
+
+gulp.task('css:minify', function() {
+  $cssStream
     .pipe(minifycss())
     .pipe(rename(function (path) {
       if(path.extname === '.css') {
@@ -39,16 +48,16 @@ gulp.task('css', function() {
     }))
     .pipe(bless())
     .pipe(gulp.dest('assets/css'))
-    .pipe(notify({ message: 'Successfully compiled LESS' }));
+    .pipe(notify({ message: 'Successfully minified CSS' }));
 });
 
 // JS
 gulp.task('js', function() {
   var scripts = [
-    'src/components/jquery/dist/jquery.js',
-    'src/components/bootstrap/js/dropdown.js',
-    'src/components/bootstrap/js/collapse.js',
-    'src/components/bootstrap/js/transition.js',
+    'bower_components/jquery/dist/jquery.js',
+    'bower_components/bootstrap/js/dropdown.js',
+    'bower_components/bootstrap/js/collapse.js',
+    'bower_components/bootstrap/js/transition.js',
     'src/js/plugins.js',
     'src/js/main.js'
   ];
@@ -103,5 +112,4 @@ gulp.task('watch', function() {
   // Livereload
   livereload.listen();
   gulp.watch('assets/**/*').on('change', livereload.changed);
-  
 });

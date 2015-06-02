@@ -1,7 +1,7 @@
 {
-	"name": "bonjour",
+  "name": "bonjour",
   "dependencies": {
-    "bootstrap": "3.3.2",
+    "bootstrap": "3.3.4",
     "retina.js": "https://github.com/jeremymouton/retinajs.git#3555b04e1f9c8693fe9f37d34a9936b3f1beb82a"
   }
 }
