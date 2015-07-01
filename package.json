@@ -11,6 +11,7 @@
     "gulp-uglify": "^0.3.1",
     "gulp-rename": "^1.2.0",
     "gulp-autoprefixer": "^2.1.0",
-    "gulp-sourcemaps": "^1.5.2"
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-pxtorem": "1.0.1"
   }
 }
