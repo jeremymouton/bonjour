@@ -1,39 +1,67 @@
-// ======================
-// Project: Project Name
-// Website: projectname.com
-// ======================
+/* *********************************
+ * Project: Project Name
+ * Website: projectname.com
+ * *********************************
+ */
 
 @bower_components: '../../bower_components';
 
-// ======================
-// COMPONENTS
+/* *********************************
+ * Components
+ *
+ */
 
-// Bootstrap
+/* Bootstrap */
 @import "_bootstrap.less";
 
 
-// ======================
-// STYLES
+/* *********************************
+ * Styles
+ *
+ */
 
-// BASE
-@import "_base/_variables.less";
-@import "_base/_webfonts.less";
+@import "_variables.less";
+
+
+/*
+ * Base
+ *
+ */
+
 @import "_base/_global.less";
 @import "_base/_headings.less";
 
-// HELPERS
+
+/*
+ * Helpers
+ *
+ */
+
 @import "_helpers/_utilities.less";
 @import "_helpers/_mixins.less";
 
-// OBJECTS
-@import "_objects/_row.less";
-@import "_objects/_column.less";
-@import "_objects/_container.less";
 
-// COMPONENTS
+/*
+ * Objects
+ *
+ */
+
+@import "_objects/_grid.less";
+
+
+/*
+ * Components
+ *
+ */
+
 @import "_components/_button.less";
 
-// BLOCKS
+
+/*
+ * Blocks
+ *
+ */
+
 @import "_blocks/_header.less";
 @import "_blocks/_footer.less";
 @import "_blocks/_navigation.less";

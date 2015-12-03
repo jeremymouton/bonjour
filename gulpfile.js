@@ -1,6 +1,6 @@
 /*
  * Gulpfile
- * 
+ *
  */
 
 var
@@ -22,7 +22,7 @@ var
 var paths = {
   assets: 'assets',
   bower:  'bower_components',
-  source: 'src'
+  src:    'src'
 }
 
 
@@ -36,14 +36,16 @@ gulp.task('css', ['css:compile', 'css:minify']);
 
 gulp.task('css:compile', function() {
   return gulp
-    .src(paths.source + '/less/styles.less')
+    .src(paths.src + '/less/styles.less')
     .pipe(sourcemaps.init())
     .pipe(less().on('error', notify.onError(function (error) {
       return 'Error compiling LESS: ' + error.message;
     })))
-    .pipe(pxtorem())
+    .pipe(pxtorem({
+      root_value: 16
+    }))
     .pipe(autoprefixer())
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.assets + '/css'))
     .pipe(notify({ message: 'Successfully compiled LESS' }));
 });
@@ -75,8 +77,8 @@ gulp.task('js', function() {
     paths.bower + '/bootstrap/js/dropdown.js',
     paths.bower + '/bootstrap/js/collapse.js',
     paths.bower + '/bootstrap/js/transition.js',
-    paths.source + '/js/plugins.js',
-    paths.source + '/js/main.js'
+    paths.src + '/js/plugins.js',
+    paths.src + '/js/main.js'
   ];
 
   return gulp
@@ -103,7 +105,7 @@ gulp.task('js', function() {
 gulp.task('fonts', function() {
   return gulp
     .src([
-      
+
     ])
     .pipe(gulp.dest(paths.assets + '/fonts'))
     .pipe(notify({ message: 'Successfully processed fonts' }));
@@ -118,7 +120,7 @@ gulp.task('fonts', function() {
 
 gulp.task('favicons', function() {
   return gulp
-    .src(paths.source + '/ico/**/*')
+    .src(paths.src + '/ico/**/*')
     .pipe(gulp.dest(paths.assets + '/ico'))
     .pipe(notify({ message: 'Successfully processed favicons' }));
 });
