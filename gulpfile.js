@@ -7,7 +7,7 @@ var
   gulp         = require('gulp'),
   less         = require('gulp-less'),
   bless        = require('gulp-bless'),
-  minifycss    = require('gulp-minify-css'),
+  cleancss     = require('gulp-clean-css'),
   uglify       = require('gulp-uglify'),
   rimraf       = require('gulp-rimraf'),
   concat       = require('gulp-concat'),
@@ -20,11 +20,10 @@ var
   livereload   = require('gulp-livereload');
 
 var paths = {
-  assets: 'assets',
-  bower:  'bower_components',
-  src:    'src'
-}
-
+  src:    'src',
+  dest:   'assets',
+  vendor: 'node_modules'
+};
 
 /**
  * Stylesheets:
@@ -46,21 +45,21 @@ gulp.task('css:compile', function() {
     }))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(paths.assets + '/css'))
+    .pipe(gulp.dest(paths.dest + '/css'))
     .pipe(notify({ message: 'Successfully compiled LESS' }));
 });
 
 gulp.task('css:minify', ['css:compile'], function() {
   return gulp
-    .src(paths.assets + '/css/styles.css')
-    .pipe(minifycss())
+    .src(paths.dest + '/css/styles.css')
+    .pipe(cleancss())
     .pipe(rename(function (path) {
       if(path.extname === '.css') {
         path.basename += '.min';
       }
     }))
     .pipe(bless())
-    .pipe(gulp.dest(paths.assets + '/css'))
+    .pipe(gulp.dest(paths.dest + '/css'))
     .pipe(notify({ message: 'Successfully minified CSS' }));
 });
 
@@ -73,10 +72,10 @@ gulp.task('css:minify', ['css:compile'], function() {
 
 gulp.task('js', function() {
   var scripts = [
-    paths.bower + '/jquery/dist/jquery.js',
-    paths.bower + '/bootstrap/js/dropdown.js',
-    paths.bower + '/bootstrap/js/collapse.js',
-    paths.bower + '/bootstrap/js/transition.js',
+    paths.vendor + '/jquery/dist/jquery.js',
+    paths.vendor + '/bootstrap/js/dropdown.js',
+    paths.vendor + '/bootstrap/js/collapse.js',
+    paths.vendor + '/bootstrap/js/transition.js',
     paths.src + '/js/plugins.js',
     paths.src + '/js/main.js'
   ];
@@ -84,14 +83,14 @@ gulp.task('js', function() {
   return gulp
     .src(scripts)
     .pipe(concat('script.js'))
-    .pipe(gulp.dest(paths.assets + '/js'))
+    .pipe(gulp.dest(paths.dest + '/js'))
     .pipe(uglify({ outSourceMap: true }))
     .pipe(rename(function (path) {
       if(path.extname === '.js') {
         path.basename += '.min';
       }
     }))
-    .pipe(gulp.dest(paths.assets + '/js'))
+    .pipe(gulp.dest(paths.dest + '/js'))
     .pipe(notify({ message: 'Successfully compiled javascript' }));
 });
 
@@ -107,7 +106,7 @@ gulp.task('fonts', function() {
     .src([
 
     ])
-    .pipe(gulp.dest(paths.assets + '/fonts'))
+    .pipe(gulp.dest(paths.dest + '/fonts'))
     .pipe(notify({ message: 'Successfully processed fonts' }));
 });
 
@@ -121,7 +120,7 @@ gulp.task('fonts', function() {
 gulp.task('favicons', function() {
   return gulp
     .src(paths.src + '/ico/**/*')
-    .pipe(gulp.dest(paths.assets + '/ico'))
+    .pipe(gulp.dest(paths.dest + '/ico'))
     .pipe(notify({ message: 'Successfully processed favicons' }));
 });
 
@@ -133,10 +132,10 @@ gulp.task('favicons', function() {
 gulp.task('rimraf', function() {
   return gulp
     .src([
-      paths.assets + '/css',
-      paths.assets + '/js',
-      paths.assets + '/ico',
-      paths.assets + '/fonts'
+      paths.dest + '/css',
+      paths.dest + '/js',
+      paths.dest + '/ico',
+      paths.dest + '/fonts'
     ], {read: false})
     .pipe(rimraf());
 });
@@ -158,12 +157,12 @@ gulp.task('default', ['rimraf'], function() {
 gulp.task('watch', function() {
 
   // Watch .less files
-  gulp.watch('src/less/**/*.less', ['css']);
+  gulp.watch(paths.src + '/less/**/*.less', ['css']);
 
   // Watch .js files
-  gulp.watch('src/js/**/*.js', ['js']);
+  gulp.watch(paths.src + '/js/**/*.js', ['js']);
 
   // Livereload
   livereload.listen();
-  gulp.watch(paths.assets + '/**/*').on('change', livereload.changed);
+  gulp.watch(paths.dest + '/**/*').on('change', livereload.changed);
 });

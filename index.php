@@ -1,6 +1,6 @@
 <?php include 'blocks/page_start.php' ?>
 
-<main class="main">
+<main class="main" role="main">
 	<div class="page-header">
 		<h1>Bonjour! <small>with Twitter Bootstrap</small></h1>
 	</div>

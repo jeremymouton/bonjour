@@ -1,49 +1,23 @@
-<header class="header">
-	<nav class="navbar navbar-main">
+<header class="header" role="banner">
+	<nav class="nav" role="navigation">
 		<div class="container">
-
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Brand</a>
-			</div>
-
-			<div id="navbar-main-collapse" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-					<li><a href="#">Link</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-							<li class="divider"></li>
-							<li><a href="#">One more separated link</a></li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Link</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-
+		  <div class="nav-wrapper">
+		    <div class="nav-toggle-wrapper">
+		      <a href="" class="nav-toggle" title="Show dashboard menu" data-nav-collapse=".toggle-main-nav">
+		        <span class="nav-toggle__menu">Menu</span>
+		        <span class="nav-toggle__icon">&equiv;</span>
+		      </a>
+		    </div>
+		    <div class="nav-collapse toggle-main-nav">
+		      <ul class="nav-section">
+		        <li><a href="#">Nav item</a></li>
+		        <li><a href="#">Nav item</a></li>
+		        <li><a href="#">Nav item</a></li>
+		        <li><a href="#">Nav item</a></li>
+		        <li><a href="#">Nav item</a></li>
+		      </ul>
+		    </div>
+		  </div>
 		</div>
 	</nav>
 </header>

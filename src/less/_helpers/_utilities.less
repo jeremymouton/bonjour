@@ -30,3 +30,27 @@
 .u-big { font-size: 2em; }
 
 .u-bold { font-weight: bold; }
+
+
+/*
+ * Display
+ *
+ */
+
+.u-hidden-xs {
+  @media (max-width: @screen-xs-max) {
+    display: none !important;
+  }
+  @media (min-width: @screen-sm) {
+    display: block !important;
+  }
+}
+
+.u-visible-xs {
+  @media (max-width: @screen-xs-max) {
+    display: block !important;
+  }
+  @media (min-width: @screen-sm) {
+    display: none !important;
+  }
+}
