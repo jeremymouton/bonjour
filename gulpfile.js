@@ -15,8 +15,12 @@ var
   notify       = require('gulp-notify'),
   rename       = require('gulp-rename'),
   path         = require('path'),
+  util         = require('gulp-util'),
   autoprefixer = require('gulp-autoprefixer'),
   sourcemaps   = require('gulp-sourcemaps'),
+  source       = require('vinyl-source-stream'),
+  babelify     = require('babelify'),
+  browserify   = require('browserify'),
   livereload   = require('gulp-livereload');
 
 var paths = {
@@ -41,7 +45,7 @@ gulp.task('css:compile', function() {
       return 'Error compiling LESS: ' + error.message;
     })))
     .pipe(pxtorem({
-      root_value: 16
+      root_value: 18
     }))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('.'))
@@ -70,20 +74,26 @@ gulp.task('css:minify', ['css:compile'], function() {
  * Concatenates and minifies scripts
  */
 
-gulp.task('js', function() {
-  var scripts = [
-    paths.vendor + '/jquery/dist/jquery.js',
-    paths.vendor + '/bootstrap/js/dropdown.js',
-    paths.vendor + '/bootstrap/js/collapse.js',
-    paths.vendor + '/bootstrap/js/transition.js',
-    paths.src + '/js/plugins.js',
-    paths.src + '/js/main.js'
-  ];
+gulp.task('js', ['js:browserify', 'js:minify']);
 
-  return gulp
-    .src(scripts)
-    .pipe(concat('script.js'))
+gulp.task('js:browserify', function() {
+  var b = browserify({
+      entries: paths.src + '/js/app.js',
+      debug: true
+    });
+
+  return b
+    .transform('babelify', { presets: ['es2015'] })
+    .bundle()
+    .pipe(source('bundle.js'))
+    .on('error', util.log)
     .pipe(gulp.dest(paths.dest + '/js'))
+    .pipe(notify({ message: 'Successfully compiled js bundle' }));
+});
+
+gulp.task('js:minify', ['js:browserify'], function() {
+  return gulp
+    .src(paths.dest + '/js/bundle.js')
     .pipe(uglify({ outSourceMap: true }))
     .pipe(rename(function (path) {
       if(path.extname === '.js') {
@@ -94,7 +104,6 @@ gulp.task('js', function() {
     .pipe(notify({ message: 'Successfully compiled javascript' }));
 });
 
-
 /**
  * Fonts:
  *
@@ -104,7 +113,8 @@ gulp.task('js', function() {
 gulp.task('fonts', function() {
   return gulp
     .src([
-
+      // paths.vendor + '/<vendor>/fonts/**/*',
+      // paths.src + '/fonts/**/*'
     ])
     .pipe(gulp.dest(paths.dest + '/fonts'))
     .pipe(notify({ message: 'Successfully processed fonts' }));
@@ -112,16 +122,18 @@ gulp.task('fonts', function() {
 
 
 /**
- * Favicons:
+ * Images/Icons:
  *
- * Copies favicons to the assets folder
+ * Copies vendor images and icons to the assets folder
  */
 
-gulp.task('favicons', function() {
+gulp.task('images', function() {
   return gulp
-    .src(paths.src + '/ico/**/*')
-    .pipe(gulp.dest(paths.dest + '/ico'))
-    .pipe(notify({ message: 'Successfully processed favicons' }));
+    .src([
+      // paths.vendor + '/<vendor>/images/*.{png,gif}'
+    ])
+    .pipe(gulp.dest(paths.dest + '/images/vendor'))
+    .pipe(notify({ message: 'Successfully processed images' }));
 });
 
 
@@ -134,8 +146,8 @@ gulp.task('rimraf', function() {
     .src([
       paths.dest + '/css',
       paths.dest + '/js',
-      paths.dest + '/ico',
-      paths.dest + '/fonts'
+      paths.dest + '/fonts',
+      paths.dest + '/images/vendor'
     ], {read: false})
     .pipe(rimraf());
 });
@@ -146,7 +158,7 @@ gulp.task('rimraf', function() {
  */
 
 gulp.task('default', ['rimraf'], function() {
-  gulp.start('css', 'js', 'fonts', 'favicons');
+  gulp.start('css', 'js', 'fonts', 'images');
 });
 
 

@@ -1,10 +1,10 @@
 /* *********************************
- * Project: Project Name
- * Website: projectname.com
- * *********************************
+ * Project:
+ * Website:
+ *
  */
-/* *********************************
- * Vendor
+/*
+ * Vendors
  *
  */
 /* Bootstrap */
@@ -271,15 +271,15 @@ th {
   box-sizing: border-box;
 }
 html {
-  font-size: 0.625rem;
+  font-size: 0.55556rem;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.77778rem;
   line-height: 1.42857143;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 input,
 button,
@@ -299,7 +299,6 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -309,11 +308,7 @@ figure {
 img {
   vertical-align: middle;
 }
-.img-responsive,
-.thumbnail > img,
-.thumbnail a > img,
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
+.img-responsive {
   display: block;
   max-width: 100%;
   height: auto;
@@ -324,8 +319,8 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857143;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -1077,11 +1072,11 @@ th {
   padding: 8px;
   line-height: 1.42857143;
   vertical-align: top;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
 }
 .table > thead > tr > th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #ddd;
 }
 .table > caption + thead > tr:first-child > th,
 .table > colgroup + thead > tr:first-child > th,
@@ -1092,10 +1087,10 @@ th {
   border-top: 0;
 }
 .table > tbody + tbody {
-  border-top: 2px solid #dddddd;
+  border-top: 2px solid #ddd;
 }
 .table .table {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 .table-condensed > thead > tr > th,
 .table-condensed > tbody > tr > th,
@@ -1106,7 +1101,7 @@ th {
   padding: 5px;
 }
 .table-bordered {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
@@ -1114,7 +1109,7 @@ th {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
@@ -1252,7 +1247,7 @@ table th[class*="col-"] {
     margin-bottom: 15px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #dddddd;
+    border: 1px solid #ddd;
   }
   .table-responsive > .table {
     margin-bottom: 0;
@@ -1302,7 +1297,7 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: 20px;
-  font-size: 1.3125rem;
+  font-size: 1.16667rem;
   line-height: inherit;
   color: #333333;
   border: 0;
@@ -1337,14 +1332,13 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 output {
   display: block;
   padding-top: 7px;
-  font-size: 0.875rem;
+  font-size: 0.77778rem;
   line-height: 1.42857143;
   color: #555555;
 }
@@ -1353,12 +1347,12 @@ output {
   width: 100%;
   height: 34px;
   padding: 6px 12px;
-  font-size: 0.875rem;
+  font-size: 0.77778rem;
   line-height: 1.42857143;
   color: #555555;
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: none;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
@@ -1370,14 +1364,14 @@ output {
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 .form-control::-moz-placeholder {
-  color: #999999;
+  color: #999;
   opacity: 1;
 }
 .form-control:-ms-input-placeholder {
-  color: #999999;
+  color: #999;
 }
 .form-control::-webkit-input-placeholder {
-  color: #999999;
+  color: #999;
 }
 .form-control::-ms-expand {
   border: 0;
@@ -1404,7 +1398,7 @@ input[type="search"] {
   input[type="time"].form-control,
   input[type="datetime-local"].form-control,
   input[type="month"].form-control {
-    line-height: 2.125rem;
+    line-height: 1.88889rem;
   }
   input[type="date"].input-sm,
   input[type="time"].input-sm,
@@ -1414,7 +1408,7 @@ input[type="search"] {
   .input-group-sm input[type="time"],
   .input-group-sm input[type="datetime-local"],
   .input-group-sm input[type="month"] {
-    line-height: 1.875rem;
+    line-height: 1.66667rem;
   }
   input[type="date"].input-lg,
   input[type="time"].input-lg,
@@ -1424,7 +1418,7 @@ input[type="search"] {
   .input-group-lg input[type="time"],
   .input-group-lg input[type="datetime-local"],
   .input-group-lg input[type="month"] {
-    line-height: 2.875rem;
+    line-height: 2.55556rem;
   }
 }
 .form-group {
@@ -1506,13 +1500,13 @@ fieldset[disabled] .checkbox label {
 .input-sm {
   height: 30px;
   padding: 5px 10px;
-  font-size: 0.75rem;
+  font-size: 0.66667rem;
   line-height: 1.5;
   border-radius: 3px;
 }
 select.input-sm {
   height: 30px;
-  line-height: 1.875rem;
+  line-height: 1.66667rem;
 }
 textarea.input-sm,
 select[multiple].input-sm {
@@ -1521,13 +1515,13 @@ select[multiple].input-sm {
 .form-group-sm .form-control {
   height: 30px;
   padding: 5px 10px;
-  font-size: 0.75rem;
+  font-size: 0.66667rem;
   line-height: 1.5;
   border-radius: 3px;
 }
 .form-group-sm select.form-control {
   height: 30px;
-  line-height: 1.875rem;
+  line-height: 1.66667rem;
 }
 .form-group-sm textarea.form-control,
 .form-group-sm select[multiple].form-control {
@@ -1537,19 +1531,19 @@ select[multiple].input-sm {
   height: 30px;
   min-height: 32px;
   padding: 6px 10px;
-  font-size: 0.75rem;
+  font-size: 0.66667rem;
   line-height: 1.5;
 }
 .input-lg {
   height: 46px;
   padding: 10px 16px;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.3333333;
   border-radius: 6px;
 }
 select.input-lg {
   height: 46px;
-  line-height: 2.875rem;
+  line-height: 2.55556rem;
 }
 textarea.input-lg,
 select[multiple].input-lg {
@@ -1558,13 +1552,13 @@ select[multiple].input-lg {
 .form-group-lg .form-control {
   height: 46px;
   padding: 10px 16px;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.3333333;
   border-radius: 6px;
 }
 .form-group-lg select.form-control {
   height: 46px;
-  line-height: 2.875rem;
+  line-height: 2.55556rem;
 }
 .form-group-lg textarea.form-control,
 .form-group-lg select[multiple].form-control {
@@ -1574,7 +1568,7 @@ select[multiple].input-lg {
   height: 46px;
   min-height: 38px;
   padding: 11px 16px;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.3333333;
 }
 .has-feedback {
@@ -1591,7 +1585,7 @@ select[multiple].input-lg {
   display: block;
   width: 34px;
   height: 34px;
-  line-height: 2.125rem;
+  line-height: 1.88889rem;
   text-align: center;
   pointer-events: none;
 }
@@ -1600,14 +1594,14 @@ select[multiple].input-lg {
 .form-group-lg .form-control + .form-control-feedback {
   width: 46px;
   height: 46px;
-  line-height: 2.875rem;
+  line-height: 2.55556rem;
 }
 .input-sm + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
 .form-group-sm .form-control + .form-control-feedback {
   width: 30px;
   height: 30px;
-  line-height: 1.875rem;
+  line-height: 1.66667rem;
 }
 .has-success .help-block,
 .has-success .control-label,
@@ -1784,13 +1778,13 @@ select[multiple].input-lg {
 @media (min-width: 768px) {
   .form-horizontal .form-group-lg .control-label {
     padding-top: 11px;
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 768px) {
   .form-horizontal .form-group-sm .control-label {
     padding-top: 6px;
-    font-size: 0.75rem;
+    font-size: 0.66667rem;
   }
 }
 .button {
@@ -1806,7 +1800,7 @@ select[multiple].input-lg {
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 0.875rem;
+  font-size: 0.77778rem;
   line-height: 1.42857143;
   border-radius: 4px;
   -webkit-user-select: none;
@@ -1820,14 +1814,13 @@ select[multiple].input-lg {
 .button.focus,
 .button:active.focus,
 .button.active.focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 .button:hover,
 .button:focus,
 .button.focus {
-  color: #333333;
+  color: #333;
   text-decoration: none;
 }
 .button:active,
@@ -1847,27 +1840,6 @@ fieldset[disabled] .button {
 a.button.disabled,
 fieldset[disabled] a.button {
   pointer-events: none;
-}
-.btn-group-lg > .btn,
-.btn-group-lg > .button {
-  padding: 10px 16px;
-  font-size: 1.125rem;
-  line-height: 1.3333333;
-  border-radius: 6px;
-}
-.btn-group-sm > .btn,
-.btn-group-sm > .button {
-  padding: 5px 10px;
-  font-size: 0.75rem;
-  line-height: 1.5;
-  border-radius: 3px;
-}
-.btn-group-xs > .btn,
-.btn-group-xs > .button {
-  padding: 1px 5px;
-  font-size: 0.75rem;
-  line-height: 1.5;
-  border-radius: 3px;
 }
 .fade {
   opacity: 0;
@@ -1929,10 +1901,10 @@ tbody.collapse.in {
   padding: 5px 0;
   margin: 2px 0 0;
   list-style: none;
-  font-size: 0.875rem;
+  font-size: 0.77778rem;
   text-align: left;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
+  background-color: #fff;
+  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
@@ -1966,7 +1938,7 @@ tbody.collapse.in {
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   outline: 0;
   background-color: #337ab7;
@@ -2001,7 +1973,7 @@ tbody.collapse.in {
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: 0.75rem;
+  font-size: 0.66667rem;
   line-height: 1.42857143;
   color: #777777;
   white-space: nowrap;
@@ -2160,23 +2132,14 @@ tbody.collapse.in {
 .input-group-lg > .input-group-btn > .button {
   height: 46px;
   padding: 10px 16px;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.3333333;
   border-radius: 6px;
 }
-select.input-group-lg > .form-control,
-select.input-group-lg > .input-group-addon,
-select.input-group-lg > .input-group-btn > .btn,
 select.input-group-lg > .input-group-btn > .button {
   height: 46px;
-  line-height: 2.875rem;
+  line-height: 2.55556rem;
 }
-textarea.input-group-lg > .form-control,
-textarea.input-group-lg > .input-group-addon,
-textarea.input-group-lg > .input-group-btn > .btn,
-select[multiple].input-group-lg > .form-control,
-select[multiple].input-group-lg > .input-group-addon,
-select[multiple].input-group-lg > .input-group-btn > .btn,
 textarea.input-group-lg > .input-group-btn > .button,
 select[multiple].input-group-lg > .input-group-btn > .button {
   height: auto;
@@ -2184,23 +2147,14 @@ select[multiple].input-group-lg > .input-group-btn > .button {
 .input-group-sm > .input-group-btn > .button {
   height: 30px;
   padding: 5px 10px;
-  font-size: 0.75rem;
+  font-size: 0.66667rem;
   line-height: 1.5;
   border-radius: 3px;
 }
-select.input-group-sm > .form-control,
-select.input-group-sm > .input-group-addon,
-select.input-group-sm > .input-group-btn > .btn,
 select.input-group-sm > .input-group-btn > .button {
   height: 30px;
-  line-height: 1.875rem;
+  line-height: 1.66667rem;
 }
-textarea.input-group-sm > .form-control,
-textarea.input-group-sm > .input-group-addon,
-textarea.input-group-sm > .input-group-btn > .btn,
-select[multiple].input-group-sm > .form-control,
-select[multiple].input-group-sm > .input-group-addon,
-select[multiple].input-group-sm > .input-group-btn > .btn,
 textarea.input-group-sm > .input-group-btn > .button,
 select[multiple].input-group-sm > .input-group-btn > .button {
   height: auto;
@@ -2238,54 +2192,16 @@ select[multiple].input-group-sm > .input-group-btn > .button {
   margin-left: -1px;
 }
 @media (min-width: 768px) {
-  .navbar-form .form-group {
-    display: inline-block;
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  .navbar-form .form-control {
-    display: inline-block;
-    width: auto;
-    vertical-align: middle;
-  }
-  .navbar-form .form-control-static {
-    display: inline-block;
-  }
-  .navbar-form .input-group {
-    display: inline-table;
-    vertical-align: middle;
-  }
-  .navbar-form .input-group .input-group-addon,
-  .navbar-form .input-group .input-group-btn,
-  .navbar-form .input-group .form-control {
-    width: auto;
-  }
-  .navbar-form .input-group > .form-control {
-    width: 100%;
-  }
-  .navbar-form .control-label {
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  .navbar-form .radio,
-  .navbar-form .checkbox {
-    display: inline-block;
-    margin-top: 0;
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  .navbar-form .radio label,
-  .navbar-form .checkbox label {
-    padding-left: 0;
-  }
-  .navbar-form .radio input[type="radio"],
-  .navbar-form .checkbox input[type="checkbox"] {
-    position: relative;
-    margin-left: 0;
-  }
-  .navbar-form .has-feedback .form-control-feedback {
-    top: 0;
-  }
+}
+@media (max-width: 767px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 768px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 767px) {
 }
 .button .label {
   position: relative;
@@ -2376,17 +2292,17 @@ select[multiple].input-group-sm > .input-group-btn > .button {
 }
 .close {
   float: right;
-  font-size: 1.3125rem;
+  font-size: 1.16667rem;
   font-weight: bold;
   line-height: 1;
-  color: #000000;
-  text-shadow: 0 1px 0 #ffffff;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
 .close:hover,
 .close:focus {
-  color: #000000;
+  color: #000;
   text-decoration: none;
   cursor: pointer;
   opacity: 0.5;
@@ -2399,20 +2315,128 @@ button.close {
   border: 0;
   -webkit-appearance: none;
 }
+.modal-open {
+  overflow: hidden;
+}
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+  outline: 0;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.modal-backdrop.in {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.modal-header .close {
+  margin-top: -2px;
+}
+.modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+}
+.modal-body {
+  position: relative;
+  padding: 15px;
+}
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.modal-footer .btn + .btn,
 .modal-footer .button + .button {
   margin-left: 5px;
   margin-bottom: 0;
 }
+.modal-footer .btn-group .btn + .btn,
 .modal-footer .btn-group .button + .button {
   margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+  .modal-content {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  .modal-sm {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
+  }
 }
 .carousel-caption .button {
   text-shadow: none;
 }
 .clearfix:before,
 .clearfix:after,
-.dl-horizontal dd:before,
-.dl-horizontal dd:after,
 .container:before,
 .container:after,
 .container-fluid:before,
@@ -2421,22 +2445,6 @@ button.close {
 .row:after,
 .form-horizontal .form-group:before,
 .form-horizontal .form-group:after,
-.btn-toolbar:before,
-.btn-toolbar:after,
-.btn-group-vertical > .btn-group:before,
-.btn-group-vertical > .btn-group:after,
-.nav:before,
-.nav:after,
-.navbar:before,
-.navbar:after,
-.navbar-header:before,
-.navbar-header:after,
-.navbar-collapse:before,
-.navbar-collapse:after,
-.pager:before,
-.pager:after,
-.panel-body:before,
-.panel-body:after,
 .modal-header:before,
 .modal-header:after,
 .modal-footer:before,
@@ -2457,19 +2465,10 @@ button.close {
   display: table;
 }
 .clearfix:after,
-.dl-horizontal dd:after,
 .container:after,
 .container-fluid:after,
 .row:after,
 .form-horizontal .form-group:after,
-.btn-toolbar:after,
-.btn-group-vertical > .btn-group:after,
-.nav:after,
-.navbar:after,
-.navbar-header:after,
-.navbar-collapse:after,
-.pager:after,
-.panel-body:after,
 .modal-header:after,
 .modal-footer:after,
 .row:after,
@@ -2723,6 +2722,23 @@ button.close {
     display: none !important;
   }
 }
+/* Retina.js */
+/**
+ * Retina.js
+ *
+ */
+/**
+ * Allows you to use retina images at various pixel densities.
+ * Examples:
+ *
+ *   .retina(/images/mypic.jpg, 2);
+ *   .retina(/images/mypic.jpg, 3, 100px 100px, left top no-repeat transparent);
+ *
+ * @param  {String} $path               The path to the file name minus extension.
+ * @param  {Number} $cap:    2          The highest pixel density level images exist for.
+ * @param  {Value}  $size:   auto auto  The intended width of the rendered image.
+ * @param  {Value}  $extras: null       Any other `background` values to be added.
+ */
 /* *********************************
  * Styles
  *
@@ -2732,11 +2748,11 @@ button.close {
  *
  */
 /*
- * Resource paths
+ * Colors
  *
  */
 /*
- * Colors
+ * Fonts
  *
  */
 /*
@@ -2749,7 +2765,16 @@ button.close {
  */
 html,
 body {
-  font-size: 16PX;
+  font-size: 18PX;
+}
+body {
+  color: #101010;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  line-height: 1.6;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
 }
 ::-moz-selection {
   background: #b3d4fc;
@@ -2846,11 +2871,6 @@ body {
  */
 /*
  * Font Anti-aliased
- *
- */
-/*
- * retina.less
- * A helper mixin for applying high-resolution background images (http://www.retinajs.com)
  *
  */
 /*
@@ -2984,7 +3004,7 @@ body {
     width: 100%;
   }
 }
-.nav-collapse.is-active {
+.nav-collapse.nav-is-open {
   max-height: 500px;
   visibility: visible;
 }
@@ -3008,24 +3028,24 @@ body {
     width: 100%;
   }
 }
-.nav-section > li {
+.nav-section__item {
   display: block;
   position: relative;
 }
 @media (min-width: 992px) {
-  .nav-section > li {
+  .nav-section__item {
     display: inline-block;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .nav-section > li {
+  .nav-section__item {
     display: table-cell;
     vertical-align: middle;
     float: none;
     text-align: center;
   }
 }
-.nav-section > li > a {
+.nav-section__item > a {
   display: block;
   text-decoration: none;
   padding: 10px 15px;

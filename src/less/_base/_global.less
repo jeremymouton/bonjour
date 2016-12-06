@@ -5,10 +5,16 @@
 
 html,
 body {
-  font-size: 16PX; // ignored by pxtorem
+  font-size: 18PX; // ignored by pxtorem
 }
 
-body {}
+body {
+  color: @base-text-color;
+  font-family: @font-primary;
+  line-height: 1.6;
+  font-size: 18px;
+  .m-font-smoothing();
+}
 
 ::-moz-selection {
   background: #b3d4fc;
