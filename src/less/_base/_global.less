@@ -11,8 +11,8 @@ body {
 body {
   color: @base-text-color;
   font-family: @font-primary;
-  line-height: 1.6;
   font-size: 18px;
+  line-height: 1.6em;
   .m-font-smoothing();
 }
 
@@ -33,11 +33,17 @@ body {
  */
 
 a {
+  color: @color-primary;
+  text-decoration: underline;
+
 	&:focus,
 	&:active,
-	&:hover {}
+	&:hover { color: @color-primary; }
+}
 
-	&:visited {}
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 ol {}

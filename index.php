@@ -1,15 +1,19 @@
 <?php include 'blocks/page_start.php' ?>
 
 <main class="main" role="main">
-	<div class="page-header">
-		<h1>Bonjour! <small>with Twitter Bootstrap</small></h1>
+	<div class="container">
+    <div class="page-header">
+  		<h1>Bonjour! <small>with Twitter Bootstrap</small></h1>
+  	</div>
+  	<blockquote>A bootstrapped template to kickstart frontend development.</blockquote>
 	</div>
-	<blockquote>A bootstrapped template to kickstart frontend development.</blockquote>
-  <button type="button" class="button" data-toggle="modal" data-target="#modal">
-    Launch demo modal
-  </button>
+
+  <hr>
+
+  <?php include 'blocks/_kitchen-sink.php' ?>
 </main>
 
+<button type="button" class="button" data-toggle="modal" data-target="#modal">Launch demo modal</button>
 <div id="modal" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -21,8 +25,8 @@
         <p>One fine body&hellip;</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="button" data-dismiss="modal">Close</button>
+        <button type="button" class="button button--primary">Save changes</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
